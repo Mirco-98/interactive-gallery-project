@@ -1,0 +1,9 @@
+#container {
+  background-color: lightgreen;
+}
+
+#img-row {
+  height: 150px;
+  background-color: lightblue;
+  border: 1px solid #000;
+}
