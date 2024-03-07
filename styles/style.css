@@ -1,5 +1,6 @@
 body {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
 }
 
 body,
@@ -7,7 +8,7 @@ body,
 #img-container-main,
 #row-img-container,
 #month-btn {
-  background-color: #060606;
+  background-color: #000611;
 }
 
 #heading {
@@ -31,8 +32,13 @@ body,
   /* border: 1px solid #fff; */
 }
 
-#month-btn,
-#month-btn:active {
+#month-btn {
+  border: none;
+}
+
+#month-btn:active,
+#month-btn:focus {
+  box-shadow: 0 0 0 2px rgba(239, 239, 239, 0.2);
   border: none;
 }
 
