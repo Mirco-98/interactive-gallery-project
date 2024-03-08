@@ -27,5 +27,5 @@ xhr.onreadystatechange = function() {
   };
 };
 
-xhr.open('GET', "https://mirco-98.github.io/gallery-database/");
+xhr.open('GET', "https://mirco-98.github.io/gallery-database/gallery.json");
 xhr.send();
