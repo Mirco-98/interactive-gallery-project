@@ -29,22 +29,22 @@ export const gallery = [
   },
   {
     id: '2ec79a53-5148-48bd-9200-a91b68c28365',
-    src: '../images/montagne-italiane.avif'
+    src: 'images/montagne-italiane.avif'
   },
   {
     id: '335c79c5-ee76-4179-834c-910fb5cb9fbf',
-    src: '../images/puppy-kitten-hero-9.jpg'
+    src: 'images/puppy-kitten-hero-9.jpg'
   },
   {
     id: 'd847dca1-09ee-43f4-84eb-b1a3ab6b8ab6',
-    src: '../images/rinocerontes.jpg'
+    src: 'images/rinocerontes.jpg'
   },
   {
     id: '7396d82c-98ee-45fb-902c-7c86634751e4',
-    src: '../images/ultra-detailed-nebula-abstract-wallpaper-4_1562-749.avif'
+    src: 'images/ultra-detailed-nebula-abstract-wallpaper-4_1562-749.avif'
   },
   {
     id: 'd1e5f439-9515-4051-8ec6-56dcbb15222b',
-    src: '../images/diego-ph-BCuxVP5WEsU-unsplash.jpg'
+    src: 'images/diego-ph-BCuxVP5WEsU-unsplash.jpg'
   }
 ];
