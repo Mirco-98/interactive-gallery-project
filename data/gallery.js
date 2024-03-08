@@ -43,4 +43,8 @@ export const gallery = [
     id: '7396d82c-98ee-45fb-902c-7c86634751e4',
     src: '../images/ultra-detailed-nebula-abstract-wallpaper-4_1562-749.avif'
   },
+  {
+    id: 'd1e5f439-9515-4051-8ec6-56dcbb15222b',
+    src: '../images/diego-ph-BCuxVP5WEsU-unsplash.jpg'
+  }
 ];

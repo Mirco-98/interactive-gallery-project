@@ -4,10 +4,7 @@ body {
 }
 
 body,
-#month-container,
-#img-container-main,
-#row-img-container,
-#month-btn {
+#img-container {
   background-color: #000611;
 }
 
@@ -15,47 +12,37 @@ body,
   color: #eeeeee;
   text-shadow: 1px 1px 2px #eeeeee;
   padding-top: 6px;
+  margin-bottom: 20px;
 }
 
 #main-container {
   padding: 8px;
 }
 
-#month-container  {
-  color: #eeeeee;
-  text-shadow: 1px 1px 2px #eeeeee;
-  border: none;
-  padding-left: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* border: 1px solid #fff; */
-}
-
-#month-btn {
-  border: none;
-}
-
-#month-btn:active,
-#month-btn:focus {
-  box-shadow: 0 0 0 2px rgba(239, 239, 239, 0.2);
-  border: none;
-}
-
-#img-container-main {
-  border: none;
-  /* border: 1px solid #fff; */
+#img-row-container {
+  padding: 10px;
 }
 
 #img-container {
+  border: none;
   margin: 0 0 4px 0;
   padding: 1px;
   text-align: center;
-  /* border: 1px solid #fff; */
+  height: 100px;
 }
 
 .img-fluid {
   width: 95%;
   height: 95%;
-  box-shadow: 2px 2px 5px rgba(239, 239, 239, 0.2);
+  box-shadow: 3px 4px 5px rgba(239, 239, 239, 0.3);
+}
+
+#footer {
+  color: #eeeeee;
+  opacity: 0.2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 0.8em;
 }
