@@ -1,0 +1,1 @@
+import { gallery } from "../data/gallery";
