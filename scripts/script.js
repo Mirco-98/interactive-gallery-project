@@ -13,7 +13,9 @@ xhr.onreadystatechange = function() {
       gallery.forEach((image) => {
         galleryHTML += `
           <li id="img-container" class="list-group-item col-4 col-md-3 col-lg-2">
-            <img src="${image.src}" class="img-fluid">
+            <button class="img-toggle">
+              <img src="${image.src}" class="img-fluid">
+            </button>
           </li>
         `;
       });
@@ -21,6 +23,37 @@ xhr.onreadystatechange = function() {
       // generate html <li> items into the <ul>
       document.querySelector('.js-row-img-container')
         .innerHTML = galleryHTML;
+
+      // use jQuery to toggle the modal through clicking thumbnails
+      $(document).ready(function() { 
+        $(".img-toggle").on("click", () => {
+          $("#modal-container").fadeIn();      
+          imgToggleBuild();  
+        });
+
+        $(".img-toggle").on("blur", () => {
+          $("#modal-container").fadeOut(); 
+        })
+
+      });
+
+      // create function to generate modal dynamically
+      function imgToggleBuild () {
+        let imgToggleHTML = "";
+
+        gallery.forEach((image) => {
+          imgToggleHTML += `
+              <div class="img-modal-content">
+                <img src="${image.src}" class="img-fluid"> 
+              </div>   
+          `;
+        
+        document.querySelector('#modal-container')
+          .innerHTML = imgToggleHTML; 
+
+        });
+      }
+
     } else {
       console.log('There was a problem with the request');
     };
