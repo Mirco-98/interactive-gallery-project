@@ -43,9 +43,9 @@ xhr.onreadystatechange = function() {
         })
 
       });
+      
       // create function to generate modal dynamically
       function imgToggleBuild (imageId) {
-        
         
         let imageSrc;
 
@@ -73,14 +73,3 @@ xhr.onreadystatechange = function() {
 
 xhr.open('GET', "https://mirco-98.github.io/gallery-database/gallery.json");
 xhr.send();
-
-
-// export function addToCart(productId) {
-  // to fix the quantity not adding up, we need to check if the product is already in the cart and if so increase its quantity
-  // let matchingItem;
-
-  // cart.forEach((cartItem) => { // loop through cart
-  //   if(productId === cartItem.productId) {
-  //     matchingItem = cartItem;
-  //   }
-  // });
