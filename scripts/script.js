@@ -13,7 +13,8 @@ xhr.onreadystatechange = function() {
       gallery.forEach((image) => {
         galleryHTML += `
           <li id="img-container" class="list-group-item col-4 col-md-3 col-lg-2">
-            <button class="img-toggle">
+            <button class="img-toggle" 
+            data-image-id="${image.id}">
               <img src="${image.src}" class="img-fluid">
             </button>
           </li>
@@ -24,11 +25,17 @@ xhr.onreadystatechange = function() {
       document.querySelector('.js-row-img-container')
         .innerHTML = galleryHTML;
 
+
       // use jQuery to toggle the modal through clicking thumbnails
       $(document).ready(function() { 
-        $(".img-toggle").on("click", () => {
-          $("#modal-container").fadeIn();      
-          imgToggleBuild();  
+
+        document.querySelectorAll('.img-toggle')
+        .forEach((button) => {
+          button.addEventListener('click', () => {
+            $("#modal-container").fadeIn();
+            const imageId = button.dataset.imageId;
+            imgToggleBuild(imageId);
+          });
         });
 
         $(".img-toggle").on("blur", () => {
@@ -36,22 +43,26 @@ xhr.onreadystatechange = function() {
         })
 
       });
-
       // create function to generate modal dynamically
-      function imgToggleBuild () {
-        let imgToggleHTML = "";
+      function imgToggleBuild (imageId) {
+        
+        
+        let imageSrc;
 
         gallery.forEach((image) => {
-          imgToggleHTML += `
-              <div class="img-modal-content">
-                <img src="${image.src}" class="img-fluid"> 
+          if(imageId === image.id) {
+            imageSrc = image.src;
+          }
+        });
+
+        let imgToggleHTML = `
+              <div class="img-modal-content modal-dialog modal-dialog-centered">
+                <img src="${imageSrc}" class="img-fluid-modal">
               </div>   
           `;
         
         document.querySelector('#modal-container')
           .innerHTML = imgToggleHTML; 
-
-        });
       }
 
     } else {
@@ -62,3 +73,14 @@ xhr.onreadystatechange = function() {
 
 xhr.open('GET', "https://mirco-98.github.io/gallery-database/gallery.json");
 xhr.send();
+
+
+// export function addToCart(productId) {
+  // to fix the quantity not adding up, we need to check if the product is already in the cart and if so increase its quantity
+  // let matchingItem;
+
+  // cart.forEach((cartItem) => { // loop through cart
+  //   if(productId === cartItem.productId) {
+  //     matchingItem = cartItem;
+  //   }
+  // });

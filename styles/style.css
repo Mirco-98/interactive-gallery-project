@@ -73,9 +73,14 @@ body,
 
 /* modal content */
 .img-modal-content {
-  background-color: inherit;
   margin: auto;
-  padding: 20px;
   border: none;
-  width: 50%;
+  width: 80%;
+}
+
+.img-fluid-modal {
+  width: 90%;
+  height: 90%;
+  box-shadow: 3px 4px 5px rgba(239, 239, 239, 0.3);
+  object-fit: cover;
 }
