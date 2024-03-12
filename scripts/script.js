@@ -15,7 +15,7 @@ xhr.onreadystatechange = function() {
           <li id="img-container" class="list-group-item col-4 col-md-3 col-lg-2">
             <button class="img-toggle" 
             data-image-id="${image.id}">
-              <img src="${image.src}" class="img-fluid">
+              <img src="${image.src}" class="img-fluid" id="thumbnail">
             </button>
           </li>
         `;
@@ -56,7 +56,7 @@ xhr.onreadystatechange = function() {
         });
 
         let imgToggleHTML = `
-              <div class="modal-dialog modal-dialog-centered modal-xl">
+              <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                   <img src="${imageSrc}">
                 </div>
