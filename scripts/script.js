@@ -56,8 +56,10 @@ xhr.onreadystatechange = function() {
         });
 
         let imgToggleHTML = `
-              <div class="img-modal-content modal-dialog modal-dialog-centered">
-                <img src="${imageSrc}" class="img-fluid-modal">
+              <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                  <img src="${imageSrc}">
+                </div>
               </div>   
           `;
         
